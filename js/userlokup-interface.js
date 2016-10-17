@@ -1,10 +1,12 @@
 var Repositories = require('./../js/userlookup.js').reposModule;
 
-var displayUser = function(name, reposData) {
+var displayUser = function(name, avatar_url) {
 
   $('.name').append("<h2> The username was " + name + "</h2>");
 
-  $('#allProjectsList').append("<h2><a href=" + reposData + ">Click to see " + name + "'s repositories.</a>" + "</h2>");
+  $('#allProjectsList').append("<h2><a href=https://github.com/"+name+"?tab=repositories"+ ">Click to see " + name + "'s repositories.</a>" + "</h2>");
+
+  $(".picture").append("<img src=" + avatar_url + "/>");
 };
 
 
